@@ -1,10 +1,6 @@
-package Shape;
-
 abstract class Shape {
     protected double dim_one , dim_two , dim_three ;
     int num_sides;
-    abstract double calculateArea(); //abstract method
-    abstract double calculatePerimeter();
 
     // zero parameter constructor
     public Shape() {
@@ -20,8 +16,11 @@ abstract class Shape {
         this.num_sides = num_sides;
     }
 
+    abstract double calculateArea(); //abstract method
+    abstract double calculatePerimeter();
+
     public int getNumSides() {
-        return this.num_sides;
+        return num_sides;
     }
 
 }
