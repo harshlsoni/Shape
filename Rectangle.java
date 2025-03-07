@@ -1,13 +1,21 @@
+// Rectangle.java - Concrete class extending Shape
 class Rectangle extends Shape {
-    public Rectangle(double length, double width ) {
-        super(length,width,0,4);
+    private double length, width;
+
+    // Constructor to initialize rectangle with length and width
+    public Rectangle(double length, double width) {
+        super("Rectangle");
+        this.length = length;
+        this.width = width;
     }
 
+    // Method to calculate area of rectangle
     public double calculateArea() {
-        return dim_one * dim_two;
+        return length * width;
     }
 
+    // Method to calculate perimeter of rectangle
     public double calculatePerimeter() {
-        return 2*(dim_one + dim_two);
+        return 2 * (length + width);
     }
 }
